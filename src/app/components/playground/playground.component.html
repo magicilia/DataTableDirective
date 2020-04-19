@@ -1,0 +1,42 @@
+<div class="row m-3">
+  <div class="col-12">
+    <button class="btn btn-primary" (click)="add()">Add new row</button>
+  </div>
+</div>
+<div class="row m-3">
+  <div class="col-12">
+    <table
+      class="table table-bordered"
+      DataTableDirective
+      [dtOptions]="dtOptions"
+      [dtRows]="dtRows | async"
+      [fixedHeader]="true"
+    >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="showNewRow">
+          <td>
+            <input class="form-control" type="text" placeholder="Insert ID" />
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Insert Title"
+            />
+          </td>
+          <td>
+            <button class="btn btn-success">Add</button>
+            <button class="btn btn-warning ml-2" (click)="hide()">Hide</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
