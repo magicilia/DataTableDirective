@@ -1,6 +1,14 @@
 # DatatableDirective
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+This project was generated for a simple reason, make angular(v.7^) and jquery datatables (https://datatables.net/) work together.
+
+[Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+
+## Install
+- npm install
+
+## Help
+- Themes can be selected in angular.json (bootstrap4)
 
 ## Development server
 
