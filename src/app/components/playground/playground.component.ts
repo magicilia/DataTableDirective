@@ -40,7 +40,7 @@ export class PlaygroundComponent implements OnInit {
     ],
   };
   showNewRow: boolean = false;
-  dtRows = this.jsonPlaceHolder.getData();
+  dtRows = this.jsonPlaceHolder.getFakeData();
 
   add() {
     this.showNewRow = true;
