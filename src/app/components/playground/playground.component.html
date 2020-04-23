@@ -17,22 +17,28 @@
           <th>ID</th>
           <th>Title</th>
           <th>Completed</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngIf="showNewRow">
           <td>
-            <input class="form-control" type="text" placeholder="Insert ID" />
+            <input class="form-control" type="text" />
           </td>
           <td>
             <input
               class="form-control"
               type="text"
-              placeholder="Insert Title"
             />
           </td>
           <td>
-            <button class="btn btn-success">Add</button>
+            <input
+              class="form-control"
+              type="text"
+            />
+          </td>
+          <td>
+            <button class="btn btn-success" (click)="addRow()">Add</button>
             <button class="btn btn-warning ml-2" (click)="hide()">Hide</button>
           </td>
         </tr>
