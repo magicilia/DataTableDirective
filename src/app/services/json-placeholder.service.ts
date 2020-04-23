@@ -17,6 +17,7 @@ export class JsonPlaceholderService {
         id: 1,
         title: "delectus aut autem",
         completed: false,
+        disabled:"true"
       },
       {
         userId: 1,

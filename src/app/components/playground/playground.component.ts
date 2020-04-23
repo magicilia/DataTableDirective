@@ -17,7 +17,7 @@ export class PlaygroundComponent implements OnInit {
       [5, 10, 25, 50, "All"],
     ],
     sort: true,
-    searching: false,
+    searching: true,
     responsive: true,
     drawCallback:()=>{
         setTimeout(() => {
@@ -55,7 +55,11 @@ export class PlaygroundComponent implements OnInit {
         sortable: false,
         width:"20%",
         render:function(data,type,row){
-          return `<button class='btn btn-danger actionButton' id="${data.id}">Action</button>`
+          if (data.disabled){
+            return `<button disabled class='btn btn-danger actionButton' id="${data.id}">Action</button>`
+          }else{
+            return `<button class='btn btn-danger actionButton' id="${data.id}">Action</button>`
+          }
         }
       },
     ],
